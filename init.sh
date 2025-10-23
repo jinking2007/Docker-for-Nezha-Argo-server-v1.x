@@ -627,7 +627,8 @@ echo "  "
 echo "=============================="
 fi
   # 赋执行权给 sh 及所有应用
-  chmod +x $WORK_DIR/{cloudflared,app,nezfz,nezha-agent,*.sh}
+  [ -n "$API_TOKEN" ] && chmod +x $WORK_DIR/{cloudflared,app,nezfz,nezha-agent,*.sh}
+  [ -z "$API_TOKEN" ] && chmod +x $WORK_DIR/{cloudflared,app,nezha-agent,*.sh}
 
 fi
 
