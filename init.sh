@@ -490,7 +490,7 @@ DASH_VER=$DASH_VER
 EOF
 
     # 生成 restore2.sh 文件的步骤2 - 在线获取 template/2restore.sh 模板生成完整 restore2.sh 文件
-    wget -qO- ${GH_PROXY}https://raw.githubusercontent.com/dsadsadsss/Docker-for-Nezha-Argo-server-v1.x/main/template/restore.sh | sed '1,/^########/d' >> $WORK_DIR/restore2.sh
+    wget -qO- ${GH_PROXY}https://raw.githubusercontent.com/dsadsadsss/Docker-for-Nezha-Argo-server-v1.x/main/template/restore2.sh | sed '1,/^########/d' >> $WORK_DIR/restore2.sh
 # 恢复备份文件
 chmod 777 $WORK_DIR/restore2.sh
 $WORK_DIR/restore2.sh a
