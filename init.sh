@@ -544,6 +544,7 @@ autostart=true
 autorestart=true
 stderr_logfile=/dev/null
 stdout_logfile=/dev/null
+user=root
 
 [program:nezha]
 command=$WORK_DIR/app
@@ -551,6 +552,7 @@ autostart=true
 autorestart=true
 stderr_logfile=/dev/null
 stdout_logfile=/dev/null
+user=root
 
 [program:agent]
 command=$AG_RUN
@@ -558,6 +560,7 @@ autostart=true
 autorestart=true
 stderr_logfile=/dev/null
 stdout_logfile=/dev/null
+user=root
 
 [program:argo]
 command=$WORK_DIR/$ARGO_RUN
@@ -565,6 +568,7 @@ autostart=true
 autorestart=true
 stderr_logfile=/dev/null
 stdout_logfile=/dev/null
+user=root
 EOF
 if [ -n "$API_TOKEN" ] && [ "$API_TOKEN" != "0" ]; then
     cat >> /etc/supervisor/conf.d/damon.conf << EOF
@@ -575,6 +579,7 @@ autostart=true
 autorestart=true
 stderr_logfile=/dev/null
 stdout_logfile=/dev/null
+user=root
 EOF
 fi
 if [ -n "$UUID" ] && [ "$UUID" != "0" ]; then
@@ -586,6 +591,7 @@ autostart=true
 autorestart=true
 stderr_logfile=/dev/null
 stdout_logfile=/dev/null
+user=root
 EOF
 get_country_code() {
     country_code="UN"
